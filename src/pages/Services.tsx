@@ -7,6 +7,8 @@ import pythonImage from '@/assets/python-programming.jpg';
 import webImage from '@/assets/web-development.jpg';
 import designImage from '@/assets/graphic-design.jpg';
 import itImage from '@/assets/it-services.jpg';
+import { Link } from "react-router-dom";
+
 
 const services = [
   {
@@ -227,12 +229,20 @@ export default function Services() {
             tailored solutions that meet your unique business requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gradient-primary text-white shadow-primary px-8">
-              Get Custom Quote
-            </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-8">
-              Schedule Consultation
-            </Button>
+            <Link to="/quote">
+              <Button size="lg" className="gradient-primary text-white shadow-primary px-8">
+                Get Custom Quote
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-white px-8"
+              >
+                Schedule Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

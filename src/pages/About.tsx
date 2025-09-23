@@ -207,7 +207,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-6">Our Global Ambition</h2>
             <p className="text-xl leading-relaxed opacity-90 mb-8">
-              LaiTech Solutions Global represents our commitment to serving clients worldwide. 
+              LaiTech Solutions represents our commitment to serving clients worldwide. 
               We believe that great technology solutions should transcend geographical boundaries, 
               and we're building a global network of partnerships and capabilities to serve our 
               clients wherever they are.

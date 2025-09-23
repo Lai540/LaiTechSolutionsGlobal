@@ -18,7 +18,7 @@ const projects = [
     technologies: ["Django", "React", "PostgreSQL", "Stripe", "Redis"],
     image: ecommerceImage,
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Lai540",
     featured: true
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     technologies: ["FastAPI", "Python", "Pandas", "Chart.js", "Docker"],
     image: analyticsImage,
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Lai540",
     featured: true
   },
   {
@@ -49,7 +49,7 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
     image: ecommerceImage,
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/Lai540"
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const projects = [
     category: "Python Programming",
     technologies: ["Python", "Pandas", "Matplotlib", "Schedule", "SMTP"],
     image: analyticsImage,
-    githubUrl: "#"
+    githubUrl: "https://github.com/Lai540"
   },
   {
     id: 6,
@@ -259,12 +259,21 @@ export default function Portfolio() {
             Let's discuss your project requirements and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gradient-primary text-white shadow-primary px-8">
-              Start Your Project
-            </Button>
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-8">
-              View More Work
-            </Button>
+            <a href="https://wa.me/254111700506" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="gradient-primary text-white shadow-primary px-8">
+                Start Your Project
+              </Button>
+            </a>
+
+            <a href="/portfolio">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-white px-8"
+              >
+                View More Work
+              </Button>
+            </a>
           </div>
         </div>
       </section>

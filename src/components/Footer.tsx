@@ -23,13 +23,13 @@ export default function Footer() {
                 professional web services, and creative design.
               </p>
               <div className="flex space-x-3">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+                <a href="https://www.linkedin.com/company/laitech-solutions-global/" className="text-muted-foreground hover:text-primary transition-smooth">
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+                <a href="https://www.facebook.com/profile.php?id=61570347132471" className="text-muted-foreground hover:text-primary transition-smooth">
                   <Facebook className="h-5 w-5" />
                 </a>
               </div>
@@ -63,7 +63,7 @@ export default function Footer() {
               <div className="space-y-2 text-sm">
                 <div className="flex items-center space-x-2 text-muted-foreground">
                   <Mail className="h-4 w-4" />
-                  <span>info@laitechsolutionsglobal.co.ke</span>
+                  <span>info@laitechsolutions.co.ke</span>
                 </div>
                 <div className="flex items-center space-x-2 text-muted-foreground">
                   <Phone className="h-4 w-4" />
