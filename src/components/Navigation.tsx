@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Mail, Phone, MessageCircle } from "lucide-react"
+import logo from "@/assets/logo.png";
+
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,10 +38,12 @@ export default function Navigation() {
             {/* Phone - Center */}
             <a
               href="tel:+254740136761"
-              className="flex items-center space-x-2 px-3 py-1 rounded-full bg-green-600 hover:bg-green-700 transition"
+              className="flex items-center space-x-2 px-3 py-1 rounded-full bg-green-600 hover:bg-green-700 transition group"
             >
               <Phone className="h-4 w-4" />
-              <span>+254 740 136 761</span>
+              <span className="hidden group-hover:inline md:inline">
+                +254 740 136 761
+              </span>
             </a>
 
             {/* WhatsApp - Right */}
@@ -62,10 +66,11 @@ export default function Navigation() {
             {/* Logo Section */}
             <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
               <img
-                src="/src/assets/logo.png"
+                src={logo}
                 alt="Logo"
                 className="h-10 w-auto"
               />
+
               <div className="flex flex-col">
                 <span className="font-bold text-lg text-foreground">LaiTech Solutions</span>
               </div>

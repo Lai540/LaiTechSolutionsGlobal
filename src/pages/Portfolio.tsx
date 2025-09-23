@@ -75,7 +75,7 @@ const projects = [
     description: "Complete office network setup with security configuration and remote access capabilities.",
     category: "IT Solutions",
     technologies: ["Cisco", "pfSense", "VPN", "Network Security"],
-    image: "/placeholder.svg"
+    image: analyticsImage
   },
   {
     id: 8,

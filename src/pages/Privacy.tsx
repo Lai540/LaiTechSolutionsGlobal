@@ -245,9 +245,9 @@ export default function Privacy() {
                   or would like to exercise your rights, please contact us:
                 </p>
                 <div className="space-y-2">
-                  <p><strong>Email:</strong> privacy@laitechsolutions.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                  <p><strong>Address:</strong> LaiTech Solutions Global, Privacy Office</p>
+                  <p><strong>Email:</strong> privacy@laitechsolutions.co.ke</p>
+                  <p><strong>Phone:</strong> +254740136761</p>
+                  <p><strong>Address:</strong> LaiTech Solutions, Privacy Office</p>
                 </div>
                 <p className="text-muted-foreground mt-4">
                   We will respond to your inquiry within 30 days of receipt.

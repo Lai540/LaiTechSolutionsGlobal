@@ -270,9 +270,9 @@ export default function Legal() {
                   For questions about these legal terms or to request modifications, please contact:
                 </p>
                 <div className="space-y-2">
-                  <p><strong>Legal Department:</strong> legal@laitechsolutions.com</p>
-                  <p><strong>General Inquiries:</strong> info@laitechsolutions.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                  <p><strong>Legal Department:</strong> legal@laitechsolutions.co.ke</p>
+                  <p><strong>General Inquiries:</strong> info@laitechsolutions.co.ke</p>
+                  <p><strong>Phone:</strong> +254740136761</p>
                 </div>
                 <p className="text-muted-foreground mt-4">
                   These terms may be updated periodically. Continued use of our services 

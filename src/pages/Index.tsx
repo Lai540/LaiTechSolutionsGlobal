@@ -36,8 +36,8 @@ const services = [
 ];
 
 const stats = [
-  { icon: Users, value: "500+", label: "Happy Clients" },
-  { icon: Star, value: "1000+", label: "Projects Completed" },
+  { icon: Users, value: "250+", label: "Happy Clients" },
+  { icon: Star, value: "600+", label: "Projects Completed" },
   { icon: Zap, value: "99%", label: "Client Satisfaction" },
 ];
 
