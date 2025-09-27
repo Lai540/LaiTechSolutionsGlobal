@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Mail, Phone, MapPin, Clock, Send, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Linkedin, Twitter, Facebook, Cpu, TrendingUp, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: "info@laitechsolutions.co.ke",
+    details: "wilfredlaiayieko@gmail.com, info@laitechsolutions.co.ke",
     description: "Send us an email anytime"
   },
   {
@@ -22,9 +22,9 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    title: "Global Operations",
-    details: "Worldwide Service",
-    description: "Remote-first with global reach"
+    title: "Our Location",
+    details: "Kisumu, Kenya",
+    description: "Serving clients across the globe remotely"
   },
   {
     icon: Clock,
@@ -34,24 +34,22 @@ const contactInfo = [
   }
 ];
 
-const offices = [
+// Replaced office cards with LaiTech + Tech Growth details
+const highlights = [
   {
-    city: "North America",
-    address: "123 Tech Boulevard, Suite 100",
-    region: "New York, NY 10001",
-    email: "na@laitechsolutions.co.ke"
+    icon: Cpu,
+    title: "Innovative Solutions",
+    description: "We specialize in transforming ideas into digital realities through AI, software, and creative design."
   },
   {
-    city: "Europe", 
-    address: "45 Innovation Street, Floor 5",
-    region: "London, UK EC2A 4BX",
-    email: "eu@laitechsolutions.co.ke"
+    icon: TrendingUp,
+    title: "Growth Mindset",
+    description: "Our goal is to empower businesses and individuals to scale with the right technology and strategies."
   },
   {
-    city: "Asia Pacific",
-    address: "88 Digital Hub, Tower A",
-    region: "Singapore 018956",
-    email: "apac@laitechsolutions.co.ke"
+    icon: Globe,
+    title: "Global Reach",
+    description: "Based in Kisumu, Kenya but serving clients worldwide through remote-first operations."
   }
 ];
 
@@ -66,7 +64,7 @@ export default function Contact() {
       "service_qi1lpd7",     // from EmailJS dashboard
       "template_rqosypu",    // from EmailJS dashboard
       form.current,
-      "_ifa1w4Nk28CK7c35"      // from EmailJS account
+      "_ifa1w4Nk28CK7c35"    // from EmailJS account
     )
     .then(
       (result) => {
@@ -122,6 +120,7 @@ export default function Contact() {
       <section className="py-20 bg-muted/30">
         <div className="container-width section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
             {/* Contact Form */}
             <div>
               <div className="mb-8">
@@ -186,41 +185,40 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map & Office Info */}
+            {/* Map & LaiTech Highlights */}
             <div>
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Our Global Work Remains Remote</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Our Location</h2>
                 <p className="text-lg text-muted-foreground">
-                  We operate globally online to serve our clients across different time zones.
+                  You can find us in Kisumu, Kenya — and we’re always ready to connect online globally.
                 </p>
               </div>
               
-              {/* Placeholder Map */}
-              <div className="bg-muted rounded-lg h-64 mb-8 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                  <p className="text-muted-foreground">Interactive Map Coming Soon</p>
-                </div>
+              {/* Google Map Embed */}
+              <div className="rounded-lg overflow-hidden h-80 mb-8 shadow-card">
+                <iframe
+                  title="Kisumu Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127644.8448610796!2d34.66740555!3d-0.09170284999999777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa5e352ecb3a7%3A0xdea3cf5b2de79c44!2sKisumu!5e0!3m2!1sen!2ske!4v1695933245174!5m2!1sen!2ske"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
               
-              {/* Office Locations */}
+              {/* LaiTech Highlights */}
               <div className="space-y-6">
-                {offices.map((office, index) => (
+                {highlights.map((item, index) => (
                   <Card key={index} className="gradient-card">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-foreground mb-3">{office.city}</h3>
-                      <div className="space-y-2 text-sm text-muted-foreground">
-                        <div className="flex items-center">
-                          <MapPin className="h-4 w-4 mr-2" />
-                          <div>
-                            <div>{office.address}</div>
-                            <div>{office.region}</div>
-                          </div>
-                        </div>
-                        <div className="flex items-center">
-                          <Mail className="h-4 w-4 mr-2" />
-                          <span>{office.email}</span>
-                        </div>
+                    <CardContent className="p-6 flex items-start space-x-4">
+                      <div className="w-10 h-10 gradient-primary rounded-full flex items-center justify-center">
+                        <item.icon className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.description}</p>
                       </div>
                     </CardContent>
                   </Card>

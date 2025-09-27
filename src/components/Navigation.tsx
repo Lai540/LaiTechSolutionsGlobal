@@ -28,11 +28,11 @@ export default function Navigation() {
           <div className="container mx-auto px-4 flex justify-between items-center">
             {/* Email - Left */}
             <a
-              href="mailto:info@laitechsolutions.co.ke"
+              href="mailto:wilfredlaiayieko@gmail.com"
               className="flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-700 transition"
             >
               <Mail className="h-4 w-4" />
-              <span>info@laitechsolutions.co.ke</span>
+              <span>wilfredlaiayieko@gmail.com or it@laitechsolutions.co.ke</span>
             </a>
 
             {/* Phone - Center */}
@@ -48,7 +48,7 @@ export default function Navigation() {
 
             {/* WhatsApp - Right */}
             <a
-              href="https://wa.me/254111700506"
+              href="https://wa.me/254740136761"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500 hover:bg-emerald-600 transition"

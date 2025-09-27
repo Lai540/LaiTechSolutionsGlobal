@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export default function Footer() {
   return (
@@ -7,29 +8,52 @@ export default function Footer() {
       <div className="container-width section-padding">
         <div className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
             {/* Company Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">LT</span>
-                </div>
-                <div>
-                  <div className="font-bold text-lg text-foreground">LaiTech Solutions</div>
-                  <div className="text-xs text-muted-foreground font-medium">Global</div>
-                </div>
+                {/* Logo Section */}
+                <Link to="/" className="flex items-center space-x-2">
+                  <img
+                    src={logo}
+                    alt="LaiTech Solutions Logo"
+                    className="h-10 w-auto"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                  <span className="font-bold text-lg text-foreground">
+                    LaiTech Solutions
+                  </span>
+                </Link>
               </div>
+
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Transforming ideas into reality through innovative technology solutions, 
                 professional web services, and creative design.
               </p>
+
               <div className="flex space-x-3">
-                <a href="https://www.linkedin.com/company/laitech-solutions-global/" className="text-muted-foreground hover:text-primary transition-smooth">
+                <a 
+                  href="https://www.linkedin.com/company/laitech-solutions-global/" 
+                  className="text-muted-foreground hover:text-primary transition-smooth"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+                <a 
+                  href="#" 
+                  className="text-muted-foreground hover:text-primary transition-smooth"
+                >
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61570347132471" className="text-muted-foreground hover:text-primary transition-smooth">
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61570347132471" 
+                  className="text-muted-foreground hover:text-primary transition-smooth"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   <Facebook className="h-5 w-5" />
                 </a>
               </div>

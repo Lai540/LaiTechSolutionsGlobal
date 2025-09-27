@@ -108,74 +108,67 @@ export default function Quote() {
                 The more details you provide, the more accurate our quote will be
               </p>
             </div>
+          </div>
+            <div>
+                <Card className="gradient-card shadow-card">
+                  <CardContent className="p-6">
+                    <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="firstName">First Name</Label>
+                          <Input name="firstName" id="firstName" placeholder="John" required />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="lastName">Last Name</Label>
+                          <Input name="lastName" id="lastName" placeholder="Doe" required />
+                        </div>
+                      </div>
 
-            <Card className="gradient-card shadow-card">
-              <CardContent className="p-8">
-                <form ref={formRef} onSubmit={sendEmail} className="space-y-8">
-                  {/* Contact Information */}
-                  <div>
-                    <h3 className="text-2xl font-semibold text-foreground mb-6">Contact Information</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="fullName">Full Name *</Label>
-                        <Input id="fullName" name="fullName" placeholder="John Doe" required />
+                        <Label htmlFor="email">Email</Label>
+                        <Input name="email" id="email" type="email" placeholder="john@example.com" required />
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email Address *</Label>
-                        <Input id="email" name="email" type="email" placeholder="john@company.com" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number *</Label>
-                        <Input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="company">Company Name</Label>
-                        <Input id="company" name="company" placeholder="Your Company" />
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Project Details */}
-                  <div>
-                    <h3 className="text-2xl font-semibold text-foreground mb-6">Project Details</h3>
-                    <div className="space-y-6">
                       <div className="space-y-2">
-                        <Label htmlFor="projectTitle">Project Title *</Label>
-                        <Input id="projectTitle" name="projectTitle" placeholder="Brief title for your project" required />
+                        <Label htmlFor="phone">Phone Number</Label>
+                        <Input name="phone" id="phone" type="tel" placeholder="+1 (555) 123-4567" />
                       </div>
+
                       <div className="space-y-2">
-                        <Label htmlFor="projectDescription">Project Description *</Label>
+                        <Label htmlFor="company">Company (Optional)</Label>
+                        <Input name="company" id="company" placeholder="Your Company Name" />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="subject">Subject</Label>
+                        <Input name="subject" id="subject" placeholder="What can we help you with?" required />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Message</Label>
                         <Textarea
-                          id="projectDescription"
-                          name="projectDescription"
+                          name="message"
+                          id="message"
                           rows={6}
-                          placeholder="Describe your project in detail..."
+                          placeholder="Tell us about your project requirements, timeline, and any specific needs..."
                           required
                         />
                       </div>
-                    </div>
-                  </div>
 
-                  {/* Submit */}
-                  <div className="text-center pt-6">
-                    <Button
-                      type="submit"
-                      size="lg"
-                      disabled={isSending}
-                      className="gradient-primary text-white shadow-primary px-12 py-4"
-                    >
-                      <Send className="mr-2 h-5 w-5" />
-                      {isSending ? "Sending..." : "Get My Free Quote"}
-                    </Button>
-                    <p className="text-sm text-muted-foreground mt-4">
-                      We'll review your request and send you a detailed proposal within 24 hours.
-                    </p>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                      <Button
+                        type="submit"
+                        size="lg"
+                        disabled={isSending}
+                        className="w-full gradient-primary text-white shadow-primary"
+                      >
+                        <Send className="mr-2 h-5 w-5" />
+                        {isSending ? "Sending..." : "Send Message"}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
       </section>
 
       {/* What Happens Next */}
