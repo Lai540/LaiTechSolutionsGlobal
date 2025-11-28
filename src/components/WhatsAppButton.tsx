@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { X } from "lucide-react"; // Using lucide X icon for consistency
 
 const WhatsAppChatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,16 @@ const WhatsAppChatbot: React.FC = () => {
       {/* Popup Chat Window */}
       {isOpen && (
         <div className="fixed bottom-20 right-6 w-80 bg-white shadow-2xl rounded-2xl overflow-hidden border">
-          {/* Header */}
-          <div className="bg-green-500 text-white px-4 py-2 font-bold">
-            LaiTech Solutions Support 💬
+          {/* Header with Close Button */}
+          <div className="bg-green-500 text-white px-4 py-2 font-bold flex justify-between items-center">
+            <span>LaiTech Solutions Support 💬</span>
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="text-white hover:text-red-500 transition"
+            >
+              <X className="h-5 w-5" />
+            </button>
           </div>
 
           {/* Options */}

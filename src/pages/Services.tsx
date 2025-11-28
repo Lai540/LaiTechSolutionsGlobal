@@ -26,6 +26,8 @@ import designImage from "@/assets/graphic-design.jpg";
 import itImage from "@/assets/it-services.jpg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import gofishnetImage from '@/assets/gofishnet-project.png';
+import systemImage from '@/assets/system.png';
 
 const services = [
   {
@@ -268,8 +270,12 @@ export default function Services() {
                     >
                       <Collapsible
                         open={openSection === `${serviceCategory.id}-${serviceIndex}`}
-                        onOpenChange={(isOpen) =>
-                          setOpenSection(isOpen ? `${serviceCategory.id}-${serviceIndex}` : null)
+                        onOpenChange={() =>
+                          setOpenSection(
+                            openSection === `${serviceCategory.id}-${serviceIndex}`
+                              ? null
+                              : `${serviceCategory.id}-${serviceIndex}`
+                          )
                         }
                       >
                         <CollapsibleTrigger asChild>
@@ -281,14 +287,18 @@ export default function Services() {
                                   {service.description}
                                 </CardDescription>
                               </div>
+
                               <ChevronDown
                                 className={`h-5 w-5 text-muted-foreground transition-transform ${
-                                  openSection === `${serviceCategory.id}-${serviceIndex}` ? "rotate-180" : ""
+                                  openSection === `${serviceCategory.id}-${serviceIndex}`
+                                    ? "rotate-180"
+                                    : ""
                                 }`}
                               />
                             </div>
                           </CardHeader>
                         </CollapsibleTrigger>
+
                         <CollapsibleContent>
                           <CardContent className="pt-0">
                             <div className="space-y-3">
@@ -302,6 +312,7 @@ export default function Services() {
                           </CardContent>
                         </CollapsibleContent>
                       </Collapsible>
+
                     </Card>
                   ))}
                 </div>

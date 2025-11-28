@@ -11,13 +11,13 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: "wilfredlaiayieko@gmail.com, info@laitechsolutions.co.ke",
+    details: "info@laitechsolutions.co.ke",
     description: "Send us an email anytime"
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: "+254 740136761 or +254 111700506",
+    details: "+254 111700506",
     description: "Mon-Fri from 8am to 6pm EAT"
   },
   {
@@ -263,7 +263,7 @@ export default function Contact() {
               Need immediate assistance? Call or whatsapp our 24/7 support line:
             </p>
             <div className="text-2xl font-bold text-primary">
-              +254 740136761
+              +254 743903869
             </div>
           </div>
         </div>

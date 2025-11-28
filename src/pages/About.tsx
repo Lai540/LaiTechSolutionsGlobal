@@ -1,7 +1,7 @@
 import { Users, Target, Eye, Award, Globe, Heart, Rocket, Briefcase } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import founderPhoto from '@/assets/founder-photo.jpg';
+import founderPhoto from '@/assets/founder-photo.png';
 import techOffice from '@/assets/tech-office.jpg';
 
 const values = [

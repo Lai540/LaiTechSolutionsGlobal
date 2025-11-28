@@ -6,6 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import ecommerceImage from '@/assets/ecommerce-project.jpg';
 import analyticsImage from '@/assets/analytics-dashboard.jpg';
 import brandImage from '@/assets/brand-identity.jpg';
+import gofishnetImage from "@/assets/gofishnet-project.png";
+import systemImage from "@/assets/system.png";
 
 const categories = ['All', 'Web Development', 'Python Programming', 'Graphic Design', 'IT Solutions'];
 
@@ -84,7 +86,33 @@ const projects = [
     technologies: ["Adobe Creative Suite", "Canva Pro", "Social Media Strategy"],
     image: brandImage,
     githubUrl: "https://github.com/Lai540"
+  },
+  {
+    id: 9,
+    title: "School Management System - Gofishnet Happy Kids Academy",
+    description:
+      "A comprehensive school management system built with Python Flask, Bootstrap, HTML, CSS, and JavaScript. It features a public-facing website, staff attendance tracking, learner and teacher management, and a powerful admin panel.",
+    category: "Web Development",
+    technologies: ["Python", "Flask", "Bootstrap", "JavaScript", "HTML", "CSS"],
+    image: gofishnetImage,
+    githubUrl: "https://github.com/Lai540",
+    websiteUrl: "https://github.com/Lai540",
+    featured: true
+  },
+  {
+    id: 10,
+    title: "Membership Management System",
+    description:
+      "This is a strong and comprehensive system that manages members from collection f details to printing of details as pdf and also having an automated card downlaod.",
+    category: "Web Development",
+    technologies: ["Python", "Flask", "Bootstrap", "JavaScript", "HTML", "CSS"],
+    image: systemImage,
+    githubUrl: "https://github.com/Lai540",
+    websiteUrl: "#", // direct live site
+    featured: true
   }
+
+
 ];
 
 // Counter hook
@@ -317,22 +345,37 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
-
+      
       {/* Project Details Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-2xl w-full relative shadow-2xl animate-fade-in">
+        <div
+          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedProject(null)} // Close when clicking outside
+        >
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full relative shadow-2xl animate-fade-in"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+          >
+            {/* Close Button */}
             <button
-              onClick={() => setSelectedProject(null)}
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation(); // Stop bubbling to parent div
+                setSelectedProject(null); // Close modal
+              }}
               className="absolute top-3 right-3 text-gray-600 hover:text-red-500 transition"
             >
               <X className="h-6 w-6" />
             </button>
+
+            {/* Project Image */}
             <img
               src={selectedProject.image}
               alt={selectedProject.title}
               className="w-full h-64 object-cover rounded-t-2xl"
             />
+
+            {/* Project Info */}
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-3">{selectedProject.title}</h3>
               <p className="text-muted-foreground mb-4">{selectedProject.description}</p>
@@ -362,7 +405,7 @@ export default function Portfolio() {
                 </Button>
               </div>
 
-              {/* GitHub Link */}
+              {/* GitHub / Project Link */}
               <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="flex items-center gap-2">
                   <Github className="h-4 w-4" /> GitHub
@@ -390,6 +433,8 @@ export default function Portfolio() {
           </div>
         </div>
       )}
+
+
 
       {/* CTA Section */}
       <section className="py-20">

@@ -32,7 +32,7 @@ export default function Navigation() {
               className="flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-600 hover:bg-blue-700 transition"
             >
               <Mail className="h-4 w-4" />
-              <span>wilfredlaiayieko@gmail.com or it@laitechsolutions.co.ke</span>
+              <span>info@laitechsolutions.co.ke</span>
             </a>
 
             {/* Phone - Center */}
@@ -42,13 +42,13 @@ export default function Navigation() {
             >
               <Phone className="h-4 w-4" />
               <span className="hidden group-hover:inline md:inline">
-                +254 740 136 761
+                +254 743903869
               </span>
             </a>
 
             {/* WhatsApp - Right */}
             <a
-              href="https://wa.me/254740136761"
+              href="https://wa.me/254111700506"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500 hover:bg-emerald-600 transition"
